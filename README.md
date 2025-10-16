@@ -1,16 +1,50 @@
-# React + Vite
+# 🎮 AI Gameverse — The AI-Driven Gaming Realm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI Gameverse** is an experimental web platform that merges **AI intelligence** with **immersive storytelling** and **interactive gameplay**.  
+Players can create, chat, and interact with AI-powered NPCs (Non-Playable Characters) who evolve through every conversation — building a living, breathing digital world.
 
-Currently, two official plugins are available:
+🌐 **Live Preview:** [Visit AI Gameverse](https://your-live-link-here.com)  
+💬 **AI Conversations:** *Coming Soon...* 🚀  
+Stay tuned as we launch intelligent NPC chat — where every word you say will shape your story.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🤖 **AI NPCs with Personality**  
+  Create and customize NPCs with distinct traits, memories, and emotions powered by modern AI APIs.
 
-## Expanding the ESLint configuration
+- 💬 **Dynamic Conversations** *(Coming Soon)*  
+  Real-time dialogue between players and AI characters using advanced natural language models.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧩 **World Builder**  
+  A creative interface to build new worlds, add storylines, and connect NPCs into one evolving ecosystem.
+
+- ⚙️ **Player Dashboard**  
+  Manage your NPCs, track interactions, and discover new characters within your realm.
+
+- 🌐 **Modern Web Tech Stack**  
+  Fast, responsive, and future-ready — built with modern JavaScript frameworks and AI integration.
+
+---
+
+## 🧠 Tech Stack
+
+| Layer | Technology |
+|--------|-------------|
+| **Frontend** | React, Tailwind CSS, Vite |
+| **Backend** | Node.js, Express |
+| **Database** | MongoDB Atlas |
+| **AI Integration** | OpenAI / HuggingFace API *(coming soon)* |
+| **Routing** | React Router |
+| **Authentication** | JWT + bcrypt |
+| **Deployment** | Vercel / Render / Netlify |
+
+---
+
+## ⚡ Getting Started
+
+### 1️⃣ Clone the repo
+```bash
+git clone https://github.com/yourusername/orivion.git
+cd orivion
