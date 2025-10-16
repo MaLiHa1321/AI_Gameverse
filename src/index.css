@@ -1,0 +1,65 @@
+@import "tailwindcss";
+.fantasy-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Glass effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Simple color classes */
+.text-fantasy-light {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-fantasy-secondary {
+  background-color: #F59E0B;
+}
+
+.hover\:bg-amber-500:hover {
+  background-color: #F59E0B;
+}
+
+/* Animation */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Add to your index.css */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+/* Enhanced 3D shadow effects */
+.shadow-3d {
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.3),
+    0 6px 6px rgba(0,0,0,0.2),
+    inset 0 -2px 5px rgba(0,0,0,0.2),
+    inset 0 2px 0 rgba(255,255,255,0.1);
+}
+
+.shadow-3d-hover {
+  box-shadow: 
+    0 15px 30px rgba(0,0,0,0.4),
+    0 10px 10px rgba(0,0,0,0.3),
+    inset 0 -3px 8px rgba(0,0,0,0.3),
+    inset 0 3px 0 rgba(255,255,255,0.2);
+}
