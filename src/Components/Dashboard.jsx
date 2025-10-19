@@ -1,9 +1,23 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { auth } from '../firebase.init';
 
 const Dashboard = ({ user }) => {
   const navigate = useNavigate()
-  const [activeTab, setActiveTab] = useState('npcs') 
+  const [activeTab, setActiveTab] = useState('npcs');
+
+ const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log('User signed out');
+        navigate('/'); // redirect to login page
+      })
+      .catch((error) => {
+        console.error('Logout error:', error);
+      });
+  };
+
 
   const fakeNPCs = [
     {
@@ -70,7 +84,12 @@ const Dashboard = ({ user }) => {
             <p className="text-white/80">Welcome, {user?.username}!</p>
           </div>
         </div>
-
+          <button
+            onClick={handleLogout}
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition duration-200"
+          >
+            Logout
+          </button>
         {/* Tabs */}
         <div className="flex space-x-4 mt-4">
           <button
@@ -163,6 +182,7 @@ const Dashboard = ({ user }) => {
                 <button className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-lg transition duration-200">
                   Play Now
                 </button>
+                
               </div>
             </div>
           ))}
