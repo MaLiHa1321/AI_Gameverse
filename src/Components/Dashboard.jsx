@@ -6,19 +6,16 @@ import { auth } from '../firebase.init';
 const Dashboard = ({ user }) => {
   const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('npcs');
-
  const handleLogout = () => {
     signOut(auth)
       .then(() => {
         console.log('User signed out');
-        navigate('/'); // redirect to login page
+        navigate('/'); 
       })
       .catch((error) => {
         console.error('Logout error:', error);
       });
   };
-
-
   const fakeNPCs = [
     {
       id: '1',
@@ -46,7 +43,6 @@ const Dashboard = ({ user }) => {
     }
   ]
 
-  // Games Data
   const games = [
     {
       id: 'tic-tac-toe',
@@ -76,7 +72,6 @@ const Dashboard = ({ user }) => {
 
   return (
     <div className="min-h-screen p-6 fantasy-bg">
-      {/* Header */}
       <div className="glass-effect rounded-2xl p-6 mb-6">
         <div className="flex justify-between items-center">
           <div>
@@ -90,7 +85,6 @@ const Dashboard = ({ user }) => {
           >
             Logout
           </button>
-        {/* Tabs */}
         <div className="flex space-x-4 mt-4">
           <button
             onClick={() => setActiveTab('npcs')}
@@ -114,8 +108,6 @@ const Dashboard = ({ user }) => {
           </button>
         </div>
       </div>
-
-      {/* NPC Conversations Tab */}
       {activeTab === 'npcs' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {fakeNPCs.map((npc) => (
@@ -141,8 +133,7 @@ const Dashboard = ({ user }) => {
               </button>
             </div>
           ))}
-          
-          {/* Create NPC Button */}
+
           <div 
             className="glass-effect rounded-2xl p-6 cursor-pointer border-2 border-dashed border-white/30 hover:border-white/50 transition duration-300 flex flex-col items-center justify-center"
             onClick={() => navigate('/create-npc')}
@@ -154,7 +145,6 @@ const Dashboard = ({ user }) => {
         </div>
       )}
 
-      {/* Mini Games Tab */}
       {activeTab === 'games' && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {games.map((game) => (
