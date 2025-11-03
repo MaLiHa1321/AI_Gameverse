@@ -5,6 +5,7 @@ import ChatInterface from './Components/ChatInterface';
 import NPCCreator from './Components/NPCCreator';
 import Dashboard from './Components/Dashboard';
 import GameInterface from './Components/GameInterface';
+import Register from './Components/Register';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login setUser={setUser} />} />
+          <Route path="/register" element={<Register setUser={setUser} />} />
           <Route path="/dashboard" element={<Dashboard user={user} />} />
           <Route path="/chat/:npcId" element={<ChatInterface user={user} />} />
           <Route path="/create-npc" element={<NPCCreator user={user} />} />

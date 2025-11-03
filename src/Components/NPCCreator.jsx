@@ -37,10 +37,9 @@ const NPCCreator = ({ user }) => {
           </div>
         </div>
 
-        {/* Form */}
         <div className="glass-effect rounded-2xl p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Avatar Selection */}
+   
             <div>
               <label className="block text-white font-semibold mb-3">Choose Avatar</label>
               <div className="grid grid-cols-4 gap-4">
@@ -60,7 +59,7 @@ const NPCCreator = ({ user }) => {
               </div>
             </div>
 
-            {/* Name & Title */}
+      
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-white font-semibold mb-2">Name</label>
@@ -86,7 +85,6 @@ const NPCCreator = ({ user }) => {
               </div>
             </div>
 
-            {/* Location */}
             <div>
               <label className="block text-white font-semibold mb-2">Location</label>
               <input
@@ -99,7 +97,7 @@ const NPCCreator = ({ user }) => {
               />
             </div>
 
-            {/* Personality */}
+          
             <div>
               <label className="block text-white font-semibold mb-2">Personality</label>
               <textarea
@@ -111,7 +109,7 @@ const NPCCreator = ({ user }) => {
               />
             </div>
 
-            {/* Backstory */}
+     
             <div>
               <label className="block text-white font-semibold mb-2">Backstory</label>
               <textarea
@@ -123,7 +121,7 @@ const NPCCreator = ({ user }) => {
               />
             </div>
 
-            {/* Submit Button */}
+  
             <button
               type="submit"
               className="w-full bg-fantasy-secondary hover:bg-amber-500 text-white font-bold py-4 px-6 rounded-lg transition duration-200 transform hover:scale-105 text-lg"

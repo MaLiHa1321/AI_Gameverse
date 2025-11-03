@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase.init';
 
-const Login = () => {
+const Register = () => {
 
   const [error, setError] = useState(null);
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -52,7 +51,15 @@ const Login = () => {
         
 
         <form onSubmit={handleSubmit} className="space-y-4">
-         
+          <div>
+            <input 
+              type="text"
+              name="name"
+              placeholder="Username"
+              className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-fantasy-secondary"
+            />
+          </div>
+
             <div>
               <input required
                 type="email"
@@ -61,7 +68,7 @@ const Login = () => {
                 className="w-full p-3 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-fantasy-secondary"
               />
             </div>
-     
+        
 
           <div>
             <input required
@@ -85,12 +92,12 @@ const Login = () => {
         <button
           
           className="w-full mt-4 text-white/80 hover:text-white transition duration-200"
-        > <p> Don't have an account</p>
-         <Link to='/register'>Sign up</Link>
+        > <p> Already have an account</p>
+         <Link to='/'>Sign in</Link>
         </button>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
