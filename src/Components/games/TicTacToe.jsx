@@ -163,7 +163,7 @@ const renderSquare = (index) => {
               <span className="text-red-400">🤖 AI wins!</span>
             )
           ) : isPlayerTurn ? (
-            <span className="text-blue-400">✅ Your turn (X)</span>
+            <span className="text-black-400">✅ Your turn (X)</span>
           ) : (
             <span className="text-purple-400">🤔 AI thinking...</span>
           )}
