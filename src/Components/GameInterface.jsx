@@ -11,8 +11,8 @@ const GameInterface = () => {
 
   const gameComponents = {
     'tic-tac-toe': <TicTacToe />,
-    'chess': <Chess />,
-    'ludo': <Ludo />
+    // 'chess': <Chess />,
+    // 'ludo': <Ludo />
   }
 
   return (

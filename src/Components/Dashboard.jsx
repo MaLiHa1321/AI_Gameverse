@@ -1,16 +1,31 @@
 import { signOut } from 'firebase/auth';
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebase.init';
 
-const Dashboard = ({ user }) => {
-  const navigate = useNavigate()
+const Dashboard = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('npcs');
- const handleLogout = () => {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    // Listen for auth state change
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setCurrentUser(user);
+      } else {
+        navigate('/'); // Redirect if no user logged in
+      }
+    });
+
+    return () => unsubscribe();
+  }, [navigate]);
+
+  const handleLogout = () => {
     signOut(auth)
       .then(() => {
         console.log('User signed out');
-        navigate('/'); 
+        navigate('/');
       })
       .catch((error) => {
         console.error('Logout error:', error);
@@ -76,7 +91,7 @@ const Dashboard = ({ user }) => {
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-white">🧙 AI GameVerse</h1>
-            <p className="text-white/80">Welcome, {user?.username}!</p>
+           Welcome, {currentUser?.displayName || currentUser?.email}!
           </div>
         </div>
           <button
