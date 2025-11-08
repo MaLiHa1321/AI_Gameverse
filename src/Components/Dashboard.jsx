@@ -9,12 +9,12 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    // Listen for auth state change
+   
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setCurrentUser(user);
       } else {
-        navigate('/'); // Redirect if no user logged in
+        navigate('/');
       }
     });
 
